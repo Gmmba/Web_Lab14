@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Resume</title>
+  <link rel="stylesheet" href="css/style.css"/>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+  <style>
+    .editable {
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .editable:focus {
+      outline: none;
+      background-color: rgba(100, 108, 255, 0.2);
+      animation: pulse 0.3s ease;
+    }
+
+    @keyframes pulse {
+      0% {
+        background-color: rgba(100, 108, 255, 0.2);
+      }
+      100% {
+        background-color: transparent;
+      }
+    }
+
+    #resume {
+      background: #fff;
+      color: #000;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.2);
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .section {
+      margin-bottom: 1.5rem;
+    }
+
+    .section h2 {
+      margin-bottom: 0.5rem;
+    }
+
+    #downloadBtn {
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <div id="app">
+    <div id="resume">
+      <div class="section">
+        <h1 class="editable" contenteditable="true">Petrov TI</h1>
+        <p class="editable" contenteditable="true">UX/UI Designer</p>
+      </div>
+
+      <div class="section">
+        <h2>Experience</h2>
+        <p class="editable" contenteditable="true"><strong>Marketing Manager</strong> (Jun 2023 - Present)</p>
+        <ul>
+          <li class="editable" contenteditable="true">Strategy development and planning of campaigns</li>
+          <li class="editable" contenteditable="true">SEO content creation</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h2>Education</h2>
+        <p class="editable" contenteditable="true"><strong>UI/UX - Coursera</strong> (2023)</p>
+        <p class="editable" contenteditable="true"><strong>SibSUTI</strong> (2017–2022)</p>
+      </div>
+
+      <div class="section">
+        <h2>Languages</h2>
+        <p class="editable" contenteditable="true">English, Malayalam, Hindi</p>
+      </div>
+
+      <div class="section">
+        <h2>Interests</h2>
+        <p class="editable" contenteditable="true">Design, Branding, Games, AI</p>
+      </div>
+
+      <button id="downloadBtn">Скачать PDF</button>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+  <script src="js/script.js"></script>
+</body>
+</html> 
